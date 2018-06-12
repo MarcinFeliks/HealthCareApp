@@ -37,7 +37,19 @@
 				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
-
+		  	<form>
+				Select what you want calculate:
+			    <select name="select" id="myCalculators">
+				        <option value="">BMI</option>
+				        <option value="">BMR</option>
+						<option value="">CPM</option>
+			    </select>
+			<br>
+			</form>
+			<p>
+			<input  type="button" id="btn" onclick="calculate()" value="Show!">
+			</p>
+			<p id="współczynnik">Twój wynik to: </p>
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>

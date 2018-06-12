@@ -42,3 +42,42 @@ function insRow(id) {
 	kal.innerHTML = "spalone kalorie: " + ((k * w) * t) + " kcal";
 	
 }
+//funkcja do BMI itp.
+function calculate(){
+var obj = document.getElementById("myCalculators");
+var obj2 = document.getElementById("współczynnik");
+var obj6 = document.getElementById("age").value;
+var obj3 = document.getElementById("weight").value;
+var obj4 = document.getElementById("growth").value;
+var obj5 = document.getElementById("yourSex").value;
+var obj7 = document.getElementById("physActivity");
+var a;
+var b;
+var c;
+
+a = obj4/100;
+b = a*a;
+c = obj7.options[obj7.selectedIndex].value;
+	
+obj2.innerHTML = obj.selectedIndex;
+	if(obj.selectedIndex == 0){
+	obj2.innerHTML = "Twoje BMI wynosi: " + Math.round((obj3/b));
+	}
+	if(obj.selectedIndex == 1){
+		if(obj5==1){
+			obj2.innerHTML = "Twoje podstawowe zapotrzebowanie kaloryczne wynosi: " + Math.round(((9.99*obj3)+(6.25*obj4)-(4.92*obj6)+5)) + " kcal";
+		}
+		if(obj5==2){
+			obj2.innerHTML = "Twoje podstawowe zapotrzebowanie kaloryczne wynosi: " + Math.round(((9.99*obj3)+(6.25*obj4)-(4.92*obj6)+-161))+ " kcal";
+		}
+	}
+	if(obj.selectedIndex == 2){
+		if(obj5==1){
+			obj2.innerHTML = "Twoje dobowe zapotrzebowanie kaloryczne wynosi: " + Math.round((((9.99*obj3)+(6.25*obj4)-(4.92*obj6)+5)*c))+ " kcal";
+		}
+		if(obj5==2){
+			obj2.innerHTML = "Twoje dobowe zapotrzebowanie kaloryczne wynosi: " + Math.round((((9.99*obj3)+(6.25*obj4)-(4.92*obj6)+-161)*c))+ " kcal";
+		}
+	}
+	
+}
