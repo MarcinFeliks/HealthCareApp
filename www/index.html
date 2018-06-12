@@ -53,9 +53,7 @@
 				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
-		  <div data-role="main" class="ui-content">
 
-		 </div>
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
@@ -68,8 +66,31 @@
 			<h1>Settings</h1>
 				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
 		  </div>
-		  <div data-role="main" class="ui-content">	
- 
+		    <div data-role="main" class="ui-content">	
+				<p>Enter your dimensions:</p>
+
+				<form id="frm1" action="/action_page.php">
+				Your weight (kg): <input type="text" id="weight" name="weight" value="100"><br>
+				Your growth (cm): <input type="text" id="growth" name="growth" value="184"><br>
+				Your age (years): <input type="text" id="age" name="age" value="26"><br><br>
+				Your sex:<select name="sex" id="yourSex">
+				        	<option value="1">Male</option>
+				        	<option value="2">Female</option>
+			    		</select>
+			
+				Your physical activity coefficient:
+						<select name="physical activity coefficient" id="physActivity">
+				        	<option value="1.2">Brak aktywności,praca siedząca</option>
+				        	<option value="1.35">Niska aktywność(praca siedząca i 1-2 treningi w tygogniu)</option>
+							<option value="1.55">Średnia aktywność(praca siedząca i 3-4 treningi w tygogniu)</option>
+				        	<option value="1.75">Wysoka aktywność(praca fizyczna i 3-4 treningi w tygogniu)</option>
+							<option value="2.1">B. Wysoka aktywność(zawodowi sportowcy i osoby codziennie trenujące)</option>
+			    		</select>
+
+				</form>
+
+		  
+			
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
