@@ -88,6 +88,11 @@
 				<p>Time (min)</p>
    				<input id="numb">
 			</form>
+			<p>
+			<input  type="button" id="btn" onclick="insRow('myTable')" value="Add!">
+			</p>
+			<table id="myTable" class="ui-responsive table-stripe ui-table"  style="border: 1px solid black">
+			</table>
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
@@ -120,8 +125,11 @@
 				        	<option value="1.75">Wysoka aktywność(praca fizyczna i 3-4 treningi w tygogniu)</option>
 							<option value="2.1">B. Wysoka aktywność(zawodowi sportowcy i osoby codziennie trenujące)</option>
 			    		</select>
-
+					<input type="button" onclick="changeSettings()" value="Submit">
 				</form>
+			<p id="savedWeight" value=""></p>
+			<p id="savedGrowth"></p>
+			<p id="savedAge"></p>				
 
 		  
 			
