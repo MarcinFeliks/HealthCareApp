@@ -10,6 +10,7 @@
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/pgb.js"></script>
 		<script src="js/stopwatch.js"></script>
+
 	</head>
 	<body onload="init()">
 	
@@ -22,16 +23,16 @@
 		  </div>
 		  <div data-role="main" class="ui-content" id="tlo">
 			<center><img src="img/HealthCareIcon.png" style="width:100px;height:100px;" /></center>
-			<a href="#pageCalculator" class="ui-btn ui-btn-corner ui-corner-all ui-shadow">Calculator</a>
-			<a href="#pageActivity" class="ui-btn ui-btn-corner ui-corner-all ui-shadow">Activity</a>
-			<a href="#pageStopwatch" class="ui-btn ui-btn-corner ui-corner-all ui-shadow">Stopwatch</a>		
+			<a href="#pageCalculator" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-heart">Calculator BMI,BMR,CPM</a>
+			<a href="#pageActivity" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-action">Activity</a>
+			<a href="#pageStopwatch" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-clock">Stopwatch</a>	
+			<a href="#pageProportion" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-shop">The correct proportions of meals</a>				
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
 		  </div> 
 		</div> 				
 	
-
 		<!-- My app Calculator page -->
 		<div data-role="page" id="pageCalculator">
 		  <div data-role="header">
@@ -57,8 +58,6 @@
 			<h1>(c)Marcin Feliks</h1>
 		  </div> 
 		</div> 		
-		
-
 
 		<!-- My app activity page -->
 		<div data-role="page" id="pageActivity">
@@ -151,7 +150,8 @@
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
 		  </div> 
-		</div> 			
+		</div> 	
+		
 		<!-- My app Stopwatch page -->
 		<div data-role="page" id="pageStopwatch">
 		  <div data-role="header">
@@ -171,6 +171,7 @@
 			<h1>(c)Marcin Feliks</h1>
 		  </div> 
 		</div> 	
+		
 		<!-- My app Info page -->
 		<div data-role="page" id="pageInfo">
 		  <div data-role="header">
@@ -178,14 +179,43 @@
 				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
+				<img src="img/moje.jpg" style="width:150px;height:150px;" />
+				<p>Student Wyższej Szkoły Ekonomii i Informatyki w Krakowie.</P>
+				<p>Nr albumu: 9851</P>
 				<p>Nazywam się Feliks Marcin, lubię aktywnie spędzać czas,</br>od biegania, ćwiczenia na siłowni po chodzeniu po górach włącznie.</P>
-				<p>Największą moją pasją jest jednak koszykówka, a moim ulubionym zespołem Chicago Bulls.</P>
+				<p>Największą moją pasją jest jednak koszykówka,<br>a moim ulubionym zespołem Chicago Bulls.</P>
 		  
 		  
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
 		  </div> 
+		</div> 
+		
+		<!-- My app Proportion page -->
+		<div data-role="page" id="pageProportion">
+		  <div data-role="header">
+			<h1>The correct proportions of meals</h1>
+				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+		  </div>
+		  <div data-role="main" class="ui-content">	
+			<form>
+				<center><fieldset data-role="controlgroup" data-type="horizontal" id="wykresy">
+				    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="off" >
+				    <label for="radio-choice-h-2a">Normal Proportion</label>
+				    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off" >
+				    <label for="radio-choice-h-2b">Lose Weight</label>
+
+				</fieldset><center>
+
+			</form> 
+		  </div>
+		  <div data-role="footer" data-position="fixed">
+			<h1>(c)Marcin Feliks</h1>
+		  </div> 
 		</div> 	
+
+
+		
 	</body>
 </html>
