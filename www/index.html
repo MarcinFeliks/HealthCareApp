@@ -9,6 +9,7 @@
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/pgb.js"></script>
 		<script src="js/stopwatch.js"></script>
+		<script src="js/localStorage.js"></script>		
 		<script src="js/picture.js"></script>
 	</head>
 	<body onload="init()">
@@ -24,7 +25,8 @@
 			<center><img src="img/HealthCareIcon.png" style="width:100px;height:100px;" /></center>
 			<a href="#pageCalculator" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-heart">Calculator BMI,BMR,CPM</a>
 			<a href="#pageActivity" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-action">Activity</a>
-			<a href="#pageStopwatch" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-clock">Stopwatch</a>			
+			<a href="#pageStopwatch" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-clock">Stopwatch</a>	
+			<a href="#pagePhoto" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-video">Zdjęcie</a>					
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
@@ -51,8 +53,8 @@
 			<input  type="button" id="btn" onclick="calculate()" value="Show!">
 			</p>
 			<p id="współczynnik">Twój wynik to: </p>
-			<button id = "cameraTakePicture" onclick="cameraTakePicture()">TAKE PICTURE</button>
-			<img id = "myImage"></img>
+			
+
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
@@ -190,7 +192,20 @@
 			<h1>(c)Marcin Feliks</h1>
 		  </div> 
 		</div> 
-		
+		<!-- My app photo page -->
+		<div data-role="page" id="pagePhoto">
+		  <div data-role="header">
+			<h1>Info o autorze</h1>
+				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+		  </div>
+		  <div data-role="main" class="ui-content">	
+				<button id = "cameraTakePicture" onclick="cameraTakePicture()">TAKE PICTURE</button>
+				<img id = "myImage" style="width:100px;height:100px;"></img>
+		  </div>
+		  <div data-role="footer" data-position="fixed">
+			<h1>(c)Marcin Feliks</h1>
+		  </div> 
+		</div> 	
 
 	</body>
 </html>
