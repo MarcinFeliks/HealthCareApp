@@ -3,7 +3,6 @@ alert('Befor You start using my application enter settings')
 	$time = document.getElementById('time');
 	update();
 
-
 }
 /*funkcja zapisująca podstawowe ustawienia
 function changeSettings(){
