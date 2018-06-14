@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">		
 		<script src="cordova.js"></script>
 		<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
@@ -10,7 +9,7 @@
 		<script src="js/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/pgb.js"></script>
 		<script src="js/stopwatch.js"></script>
-
+		<script src="js/localStorage.js"></script>
 	</head>
 	<body onload="init()">
 	
@@ -26,7 +25,7 @@
 			<a href="#pageCalculator" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-heart">Calculator BMI,BMR,CPM</a>
 			<a href="#pageActivity" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-action">Activity</a>
 			<a href="#pageStopwatch" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-clock">Stopwatch</a>	
-			<a href="#pageProportion" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-shop">The correct proportions of meals</a>				
+			<a href="#pageProportion" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-shop">The correct proportions of meals</a>			
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
@@ -118,9 +117,9 @@
 			<h1>Settings</h1>
 				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
 		  </div>
-		    <div data-role="main" class="ui-content">	
-				<p>Enter your dimensions:</p>
+		    <div data-role="main" class="ui-content">					
 
+								
 				<form id="frm1" action="/action_page.php">
 				Your weight (kg): <input type="text" id="weight" name="weight" value="100"><br>
 				Your growth (cm): <input type="text" id="growth" name="growth" value="184"><br>
@@ -138,14 +137,15 @@
 				        	<option value="1.75">Wysoka aktywność(praca fizyczna i 3-4 treningi w tygogniu)</option>
 							<option value="2.1">B. Wysoka aktywność(zawodowi sportowcy i osoby codziennie trenujące)</option>
 			    		</select>
-					<input type="button" onclick="changeSettings()" value="Submit">
-				</form>
-			<p id="savedWeight" value=""></p>
-			<p id="savedGrowth"></p>
-			<p id="savedAge"></p>				
 
-		  
-			
+					<!--<input type="button" onclick="changeSettings()" value="Submit">-->
+				</form> 	
+					<center><DIV data-role="controlgroup" data-type="horizontal">	
+						<button id = "setLocalStorage" onclick="setLocalStorage()" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-check">Save</button>
+						<button id = "showLocalStorage" onclick="showLocalStorage() " class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-eye">Show</button>
+						<button id = "removeProjectFromLocalStorage" onclick="removeProjectFromLocalStorage()" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-delete">Remove</button>
+					</div></center>	
+						
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
@@ -183,9 +183,7 @@
 				<p>Student Wyższej Szkoły Ekonomii i Informatyki w Krakowie.</P>
 				<p>Nr albumu: 9851</P>
 				<p>Nazywam się Feliks Marcin, lubię aktywnie spędzać czas,</br>od biegania, ćwiczenia na siłowni po chodzeniu po górach włącznie.</P>
-				<p>Największą moją pasją jest jednak koszykówka,<br>a moim ulubionym zespołem Chicago Bulls.</P>
-		  
-		  
+				<p>Największą moją pasją jest jednak koszykówka,<br>a moim ulubionym zespołem Chicago Bulls.</P>		  
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
@@ -199,23 +197,11 @@
 				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
-			<form>
-				<center><fieldset data-role="controlgroup" data-type="horizontal" id="wykresy">
-				    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="off" >
-				    <label for="radio-choice-h-2a">Normal Proportion</label>
-				    <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="off" >
-				    <label for="radio-choice-h-2b">Lose Weight</label>
 
-				</fieldset><center>
-
-			</form> 
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
 		  </div> 
 		</div> 	
-
-
-		
 	</body>
 </html>

@@ -2,9 +2,10 @@ function init() {
 alert('Befor You start using my application enter settings')		
 	$time = document.getElementById('time');
 	update();
+	
 
 }
-//funkcja zapisująca podstawowe ustawienia
+/*funkcja zapisująca podstawowe ustawienia
 function changeSettings(){
 	var obj = document.getElementById("weight").value;
 	var obj2 = document.getElementById("growth").value;
@@ -20,7 +21,8 @@ function changeSettings(){
 	
 	
 	alert('Twoja zapisana waga: ' + obj + '\nTwój zapisany wzrost: ' + obj2  + '\nTwój zapisany wiek: ' + obj3 )
-}
+}*/
+
 //funkcja przeliczająca spalanie kalori/minute
 function insRow(id) {
     var x = document.getElementById(id).insertRow(0);
@@ -28,55 +30,58 @@ function insRow(id) {
 	var time = x.insertCell(1);
     var kal = x.insertCell(2);
 	var obj = document.getElementById("mySelect");
-	var weight = document.getElementById("savedWeight");
+	var weight = document.getElementById("weight");
 	var t;
 	var k;
 	var w;
+
+	
+
 	// Get the value of the input field with id="numb"
 		t = document.getElementById("numb").value;
 		k = document.getElementById("mySelect").value;	
-		w = document.getElementById("savedWeight").value;
+		w = document.getElementById("weight").value;
 		
     exercise.innerHTML =obj.options[obj.selectedIndex].text;
 	time.innerHTML = "czas:" + t +" min";
 	kal.innerHTML = "spalone kalorie: " + ((k * w) * t) + " kcal";
 	
 }
-//funkcja do BMI itp.
+//funkcja obliczająca BMI itp.
 function calculate(){
 var obj = document.getElementById("myCalculators");
 var obj2 = document.getElementById("współczynnik");
-var obj6 = document.getElementById("age").value;
-var obj3 = document.getElementById("weight").value;
-var obj4 = document.getElementById("growth").value;
-var obj5 = document.getElementById("yourSex").value;
-var obj7 = document.getElementById("physActivity");
-var a;
+var ageValue = document.getElementById("age").value;
+var weightValue = document.getElementById("weight").value;
+var growthValue = document.getElementById("growth").value;
+var sexValue = document.getElementById("yourSex").value;
+var selectActivity = document.getElementById("physActivity");
+var fromCmOnM;
 var b;
 var c;
 
-a = obj4/100;
-b = a*a;
-c = obj7.options[obj7.selectedIndex].value;
+fromCmOnM = growthValue/100;
+b = fromCmOnM*fromCmOnM;
+c = selectActivity.options[selectActivity.selectedIndex].value;
 	
 obj2.innerHTML = obj.selectedIndex;
 	if(obj.selectedIndex == 0){
-	obj2.innerHTML = "Twoje BMI wynosi: " + Math.round((obj3/b));
+	obj2.innerHTML = "Twoje BMI wynosi: " + Math.round((weightValue/b));
 	}
 	if(obj.selectedIndex == 1){
-		if(obj5==1){
-			obj2.innerHTML = "Twoje podstawowe zapotrzebowanie kaloryczne wynosi: " + Math.round(((9.99*obj3)+(6.25*obj4)-(4.92*obj6)+5)) + " kcal";
+		if(sexValue==1){
+			obj2.innerHTML = "Twoje podstawowe zapotrzebowanie kaloryczne wynosi: " + Math.round(((9.99*weightValue)+(6.25*growthValue)-(4.92*ageValue)+5)) + " kcal";
 		}
-		if(obj5==2){
-			obj2.innerHTML = "Twoje podstawowe zapotrzebowanie kaloryczne wynosi: " + Math.round(((9.99*obj3)+(6.25*obj4)-(4.92*obj6)+-161))+ " kcal";
+		if(sexValue==2){
+			obj2.innerHTML = "Twoje podstawowe zapotrzebowanie kaloryczne wynosi: " + Math.round(((9.99*weightValue)+(6.25*growthValue)-(4.92*ageValue)+-161))+ " kcal";
 		}
 	}
 	if(obj.selectedIndex == 2){
-		if(obj5==1){
-			obj2.innerHTML = "Twoje dobowe zapotrzebowanie kaloryczne wynosi: " + Math.round((((9.99*obj3)+(6.25*obj4)-(4.92*obj6)+5)*c))+ " kcal";
+		if(sexValue==1){
+			obj2.innerHTML = "Twoje dobowe zapotrzebowanie kaloryczne wynosi: " + Math.round((((9.99*weightValue)+(6.25*growthValue)-(4.92*ageValue)+5)*c))+ " kcal";
 		}
-		if(obj5==2){
-			obj2.innerHTML = "Twoje dobowe zapotrzebowanie kaloryczne wynosi: " + Math.round((((9.99*obj3)+(6.25*obj4)-(4.92*obj6)+-161)*c))+ " kcal";
+		if(sexValue==2){
+			obj2.innerHTML = "Twoje dobowe zapotrzebowanie kaloryczne wynosi: " + Math.round((((9.99*weightValue)+(6.25*growthValue)-(4.92*ageValue)+-161)*c))+ " kcal";
 		}
 	}
 	
