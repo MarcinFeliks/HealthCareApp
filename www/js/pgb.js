@@ -2,7 +2,7 @@ function init() {
 alert('Befor You start using my application enter settings')		
 	$time = document.getElementById('time');
 	update();
-	
+
 
 }
 /*funkcja zapisująca podstawowe ustawienia
@@ -22,6 +22,8 @@ function changeSettings(){
 	
 	alert('Twoja zapisana waga: ' + obj + '\nTwój zapisany wzrost: ' + obj2  + '\nTwój zapisany wiek: ' + obj3 )
 }*/
+
+
 
 //funkcja przeliczająca spalanie kalori/minute
 function insRow(id) {
@@ -79,9 +81,11 @@ obj2.innerHTML = obj.selectedIndex;
 	if(obj.selectedIndex == 2){
 		if(sexValue==1){
 			obj2.innerHTML = "Twoje dobowe zapotrzebowanie kaloryczne wynosi: " + Math.round((((9.99*weightValue)+(6.25*growthValue)-(4.92*ageValue)+5)*c))+ " kcal";
+			
 		}
 		if(sexValue==2){
 			obj2.innerHTML = "Twoje dobowe zapotrzebowanie kaloryczne wynosi: " + Math.round((((9.99*weightValue)+(6.25*growthValue)-(4.92*ageValue)+-161)*c))+ " kcal";
+			
 		}
 	}
 	
