@@ -18,15 +18,15 @@
 		<div data-role="page" id="pageMain">
 		  <div data-role="header">
 			<h1>HealthCare</h1>
-			<a href="#pageSettings" class="ui-btn ui-btn-icon-left ui-icon-gear">Settings</a>
+			<a href="#pageSettings" class="ui-btn ui-btn-icon-left ui-icon-gear">Ustawienia</a>
 			<a href="#pageInfo" class="ui-btn ui-btn-icon-right ui-icon-info">Info</a>
 		  </div>
 		  <div data-role="main" class="ui-content" id="tlo">
 			<center><img src="img/HealthCareIcon.png" style="width:100px;height:100px;" /></center>
-			<a href="#pageCalculator" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-heart">Calculator BMI,BMR,CPM</a>
-			<a href="#pageActivity" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-action">Activity</a>
-			<a href="#pageStopwatch" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-clock">Stopwatch</a>	
-			<a href="#pagePhoto" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-video">Take photo</a>					
+			<a href="#pageCalculator" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-heart">Kalkulator BMI,BMR,CPM</a>
+			<a href="#pageActivity" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-action">Aktywności</a>
+			<a href="#pageStopwatch" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-clock">Stoper</a>	
+			<a href="#pagePhoto" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-video">Zrób zdjęcie</a>					
 		  </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c)Marcin Feliks</h1>
@@ -36,12 +36,12 @@
 		<!-- My app Calculator page -->
 		<div data-role="page" id="pageCalculator">
 		  <div data-role="header">
-			<h1>Calculator</h1>
-				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+			<h1>Kalkulator</h1>
+				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Wróć</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
 		  	<form>
-				Select what you want calculate:
+				Wybierz co chcesz policzyć:
 			    <select name="select" id="myCalculators">
 				        <option value="">BMI</option>
 				        <option value="">BMR</option>
@@ -64,8 +64,8 @@
 		<!-- My app activity page -->
 		<div data-role="page" id="pageActivity">
 		  <div data-role="header">
-			<h1>Activity</h1>
-				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+			<h1>Aktywności</h1>
+				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Wróć</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
 		  	<form>
@@ -73,19 +73,19 @@
 			    <select name="select" id="mySelect">
 			        <optgroup label="Recreational">
 				        <option value="0.08">Golf</option>
-				        <option value="0.05">Bowling</option>
+				        <option value="0.05">Kręgle</option>
 				        <option value="0.10">Nordic Walking</option>
-						<option value="0.08">Dance</option>
+						<option value="0.08">Taniec</option>
 			        </optgroup>			        
 			        <optgroup label="Activity">
 				        <option value="0.12">Areobik</option>
-				        <option value="0.20">Walking up the stairs</option>
-				        <option value="0.08">Slow run</option>
-						<option value="0.11">Cycling(10km/h)</option>
-						<option value="0.17">Cycling(20km/h)</option>    
-						<option value="0.14">Running (7,5km/h)</option>
-						<option value="0.20">Running (12km/h)</option>
-						<option value="0.27">Running(15km/h)</option>
+				        <option value="0.20">Wchodzenie po schodach</option>
+				        <option value="0.08">wolny bieg</option>
+						<option value="0.11">Rower(10km/h)</option>
+						<option value="0.17">Rower(20km/h)</option>    
+						<option value="0.14">Bieganie(7,5km/h)</option>
+						<option value="0.20">Bieganie(12km/h)</option>
+						<option value="0.27">Bieganie(15km/h)</option>
 			        </optgroup>
 			        <optgroup label="Martial arts">
 			            <option value="0.16">Boks</option>
@@ -94,13 +94,13 @@
 						<option value="0.16">Judo</option>
 			        </optgroup>
 			        <optgroup label="Team sports">
-			            <option value="0.13">Basketball</option>
-			            <option value="0.15">Football</option>
-			            <option value="0.06">Voleyball</option>
+			            <option value="0.13">Koszykówka</option>
+			            <option value="0.15">Piłka Nożna</option>
+			            <option value="0.06">Siatkówka</option>
 			        </optgroup>			
 			    </select>
 			<br>
-				<p>Time (min)</p>
+				<p>Czas (min)</p>
    				<input id="numb">
 			</form>
 			<p>
@@ -118,21 +118,21 @@
 		<div data-role="page" id="pageSettings">
 		  <div data-role="header">
 			<h1>Settings</h1>
-				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Wróć</a>
 		  </div>
 		    <div data-role="main" class="ui-content">					
 
 								
 				<form id="frm1" action="/action_page.php">
-				Your weight (kg): <input type="text" id="weight" name="weight" value="100"><br>
-				Your growth (cm): <input type="text" id="growth" name="growth" value="184"><br>
-				Your age (years): <input type="text" id="age" name="age" value="26"><br><br>
-				Your sex:<select name="sex" id="yourSex">
-				        	<option value="1">Male</option>
-				        	<option value="2">Female</option>
+				Twoja waga (kg): <input type="text" id="weight" name="weight" value="100"><br>
+				Twój wzrost (cm): <input type="text" id="growth" name="growth" value="184"><br>
+				Twój wiek (years): <input type="text" id="age" name="age" value="26"><br><br>
+				Twoja płeć:<select name="sex" id="yourSex">
+				        	<option value="1">Mężczyzna</option>
+				        	<option value="2">Kobieta</option>
 			    		</select>
 			
-				Your physical activity coefficient:
+				Twoja aktywność fizyczna:
 						<select name="physical activity coefficient" id="physActivity">
 				        	<option value="1.2">Brak aktywności,praca siedząca</option>
 				        	<option value="1.35">Niska aktywność(praca siedząca i 1-2 treningi w tygogniu)</option>
@@ -144,9 +144,9 @@
 					<!--<input type="button" onclick="changeSettings()" value="Submit">-->
 				</form> 	
 					<center><DIV data-role="controlgroup" data-type="horizontal">	
-						<button id = "setLocalStorage" onclick="setLocalStorage()" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-check">Save</button>
-						<button id = "showLocalStorage" onclick="showLocalStorage() " class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-eye">Show</button>
-						<button id = "removeProjectFromLocalStorage" onclick="removeProjectFromLocalStorage()" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-delete">Remove</button>
+						<button id = "setLocalStorage" onclick="setLocalStorage()" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-check">Zapisz</button>
+						<button id = "showLocalStorage" onclick="showLocalStorage() " class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-eye">Pokaż</button>
+						<button id = "removeProjectFromLocalStorage" onclick="removeProjectFromLocalStorage()" class="ui-btn ui-btn-corner ui-corner-all ui-shadow ui-btn-icon-left ui-icon-delete">Usuń</button>
 					</div></center>	
 						
 		  </div>
@@ -158,12 +158,12 @@
 		<!-- My app Stopwatch page -->
 		<div data-role="page" id="pageStopwatch">
 		  <div data-role="header">
-			<h1>Stopwatch</h1>
-				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+			<h1>Stoper</h1>
+				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Wróć</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
 				<center><img src="img/stopwatch.png" style="width:100px;height:100px;" /></center>
-				<center><div>Time: <span id="time"></span></div></center>
+				<center><div>Czas: <span id="time"></span></div></center>
 				<center><div id="kontrolki">
 					<input type="button" value="start" onclick="start();">
 					<input type="button" value="stop" onclick="stop();">
@@ -178,8 +178,8 @@
 		<!-- My app Info page -->
 		<div data-role="page" id="pageInfo">
 		  <div data-role="header">
-			<h1>Info o autorze</h1>
-				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+			<h1>Zdjęcie</h1>
+				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Wróć</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
 				<img src="img/moje.jpg" style="width:150px;height:150px;" />
@@ -196,10 +196,10 @@
 		<div data-role="page" id="pagePhoto">
 		  <div data-role="header">
 			<h1>Info o autorze</h1>
-				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Back</a>
+				<a href="#pageMain" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-carat-l">Wróć</a>
 		  </div>
 		  <div data-role="main" class="ui-content">	
-				<button id = "cameraTakePicture" onclick="cameraTakePicture()">TAKE PICTURE</button>
+				<button id = "cameraTakePicture" onclick="cameraTakePicture()">Zrób zdjęcie</button>
 				<center><img id = "myImage" style="width:80%;height:80%;"></img></center>
 		  </div>
 		  <div data-role="footer" data-position="fixed">
