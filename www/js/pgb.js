@@ -1,5 +1,7 @@
 function init() {
-alert('Befor You start using my application enter settings')		
+	
+	
+alert('Zanim zaczniesz używać mojej aplikacji, wprowadź ustawienia i zapisz')		
 	$time = document.getElementById('time');
 	update();
 
